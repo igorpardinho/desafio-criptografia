@@ -56,7 +56,7 @@ public class CustomerController {
 
     }
    @PostMapping
-    public ResponseEntity<Void> save( @Valid CustomerDTO customerDTO){
+    public ResponseEntity<Void> save(@RequestBody @Valid CustomerDTO customerDTO){
         customerService.save(customerDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
