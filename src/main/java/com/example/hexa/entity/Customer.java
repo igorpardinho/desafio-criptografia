@@ -22,7 +22,7 @@ public class Customer {
 
     private String userDocument;
 
-    private String creditCartToken;
+    private String creditCardToken;
 
     private Long value;
 }

@@ -30,8 +30,8 @@ public class CustomerController {
             customerService.findById(id).setUserDocument(customerService
                     .encrypt(customerService.findById(id).getUserDocument()));
 
-            customerService.findById(id).setCreditCartToken(customerService
-                    .encrypt(customerService.findById(id).getCreditCartToken()));
+            customerService.findById(id).setCreditCardToken(customerService
+                    .encrypt(customerService.findById(id).getCreditCardToken()));
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
@@ -47,7 +47,7 @@ public class CustomerController {
                 .map(v -> {
                     try {
                         v.setUserDocument(customerService.encrypt(v.getUserDocument()));
-                        v.setCreditCartToken(customerService.encrypt(v.getCreditCartToken()));
+                        v.setCreditCardToken(customerService.encrypt(v.getCreditCardToken()));
                          return v;
                     } catch (Exception e) {
                         throw new RuntimeException(e);

@@ -18,7 +18,7 @@ public class CustomerDTO {
     private String userDocument;
 
     @NotBlank
-    private String creditCartToken;
+    private String creditCardToken;
 
     @NotNull
     private Long value;
